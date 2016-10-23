@@ -1,0 +1,19 @@
+(defun racine2 (nb)
+   ())
+
+(defun delta (a b c)
+   (- (* b b) ( * 4 a c)))
+
+(defun solve (a b d)
+   (if (> d 0)
+       (format t "x1: ~D~%x2: ~D~%"
+          (/ (- (- 0 b) (sqrt d)) (* 2 a))
+          (/ (+ (- 0 b) (sqrt d)) (* 2 a))))
+   (if (= d 0)
+       (format t "x = ~D~%"
+          (/ (- 0 b) (* 2 a))))
+   (if (< d 0)  
+       (print "there are no solutions")))
+
+(defun equation_2d (a b c)
+          (solve a b (delta a b c)))
